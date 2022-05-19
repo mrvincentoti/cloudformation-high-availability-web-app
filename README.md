@@ -1,16 +1,5 @@
 ## Project Title - Deploy a high-availability web app using CloudFormation
 
-This repository houses the infrastructure code to deploy a high-availability web app using CloudFormation.
-This folder contains the following files:
-
-##### 1. network-stack.yaml file
-
-##### 2. servver-stack.yaml file
-
-##### 3. network-parameters.json file
-
-##### 4. server-parameters.json file
-
 #### The business goal
 
 A company is creating an Instagram clone called Udagram.
@@ -43,3 +32,13 @@ Good to have - Once the project is completed, a user should be able to deploy a 
 ###### 4. The application needs to be deployed into private subnets with a Load Balancer located in a public subnet.
 
 ###### 5. One of the output exports of the CloudFormation script should be the public URL of the LoadBalancer. Bonus points if you add http:// in front of the load balancer DNS Name in the output, for convenience.
+
+This repository contains the following iac and parameters files:
+
+##### 1. network-stack.yaml file
+
+##### 2. servver-stack.yaml file
+
+##### 3. network-parameters.json file
+
+##### 4. server-parameters.json file
