@@ -42,3 +42,7 @@ This repository contains the following iac and parameters files:
 ##### 3. network-parameters.json file
 
 ##### 4. server-parameters.json file
+
+LOAD BALANCER URL
+
+http://serve-webap-1sd44mb234ptn-1958168760.us-east-1.elb.amazonaws.com/
