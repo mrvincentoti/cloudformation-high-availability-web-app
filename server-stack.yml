@@ -57,7 +57,9 @@ Resources:
           sudo apt-get install apache2 -y
           sudo systemctl start apache2.service
           cd /var/www/html
-          echo "it works! Udagram, Udacity!" > index.html
+          apt-get install awscli unzip -y 
+          aws s3 cp s3://udagram2345678/app.zip .
+          unzip -o app.zip
       ImageId: !Ref ImageID
       IamInstanceProfile: !Ref InstanceProfile
       SecurityGroups:
