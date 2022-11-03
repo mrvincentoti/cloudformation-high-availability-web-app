@@ -26,4 +26,4 @@ along with the necessary supporting software.
 1. clone repository
 2. navigate to the cloned folder
 3. run this command `aws cloudformation create-stack --stack-name network-stack --region us-east-1 --template-body file://network-stack.yml --parameters file://network-params.json` to create the network infrastructure
-4. run this command `aws cloudformation create-stack --stack-name compute-stack --region us-east-1 --template-body file://server-stack.yml --parameters file://server-params.json` to create the compute infrastructure
+4. run this command `aws cloudformation create-stack --stack-name compute-stack --region us-east-1 --template-body file://server-stack.yml --parameters file://server-params.json --capabilities "CAPABILITY_IAM" "CAPABILITY_NAMED_IAM"` to create the compute infrastructure
