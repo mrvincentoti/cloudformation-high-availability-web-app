@@ -1,20 +1,20 @@
-## DEPLOY A HIGHLY AVAILABLE WEB APPLICATION ON AWS WITH CLOUDFORMATION
+### DEPLOY A HIGHLY AVAILABLE WEB APPLICATION ON AWS WITH CLOUDFORMATION
 
 ![This is an image](infrastructure-diagram/HA-Infrastructure.png)
 
-#### The business goal
+#### THE BUSINESS GOAL
 
 A company is creating an Instagram clone called Udagram.
 Developers want to deploy a new application to the AWS infrastructure.
 This repository contains code to provisioning the required infrastructure and deploying the application,
 along with the necessary supporting software.
 
-#### Project requirements
+#### PROJECT REQUIREMENTS
 
 1. AWS Account
 2. Install and configure AWS CLI
 
-#### Project files
+#### PROJECT FILES
 
 1. network-stack.yaml file - code to setup the network infrastructure (VPC -Public and Private Subnets -Internet Gateway -NAT Gateway -Elastic IP address and -Route Tables)
 2. server-stack.yaml file - code to create the compute resources (Load Balancer -Autoscaling Group - IAM roles - Target Groups -EC2 Launch configuration)
