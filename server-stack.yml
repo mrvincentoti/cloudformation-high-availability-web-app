@@ -140,6 +140,33 @@ Resources:
           Values: [/]
       ListenerArn: !Ref "Listener"
       Priority: 1
+  JumpBoxSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow http to administrator host
+      VpcId:
+        Fn::ImportValue: !Sub "${EnvironmentName}-VPCID"
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 22
+          ToPort: 22
+          CidrIp: 0.0.0.0/0
+  JumpBoxServer:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: "ami-09d56f8956ab235b3"
+      KeyName: "masterkey"
+      NetworkInterfaces:
+        - AssociatePublicIpAddress: "true"
+          DeviceIndex: "0"
+          GroupSet:
+            - Ref: "JumpBoxSecurityGroup"
+          SubnetId:
+            Fn::ImportValue:
+              Fn::Sub: ${EnvironmentName}-PUB1-SN
+      Tags:
+        - Key: Name
+          Value: JumpBoxServer
 Outputs:
   LoadBalancerPublicURL:
     Description: The Public URL of the application load balancer
