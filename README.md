@@ -13,6 +13,8 @@ along with the necessary supporting software.
 
 1. AWS Account
 2. Install and configure AWS CLI
+3. Create an s3 bucket
+4. Upload a simple static website as a zip file to the s3 bucket (Launch config will copy this file to your ec2 instances)
 
 #### PROJECT FILES
 
